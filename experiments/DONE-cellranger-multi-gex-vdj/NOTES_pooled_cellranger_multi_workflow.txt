@@ -1,0 +1,46 @@
+================================================
+Pooled Cellranger Multi Runs -- Kovacs_20251119
+Analysis Workflow Notes
+================================================
+
+
+================================================
+RUNNING THE SLURM SCRIPT
+================================================
+
+Each pool had its own cellranger multi run. There were 4 pools and therefore 4 config files. The slurm script was re-used. Manually edited these three lines (to help keep track of the pool):
+
+#SBATCH --job-name=pool1
+config_file=/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/run1/multi_config_pool1.csv
+cellranger multi --id Kovacs_20251119_multi_pool1
+
+
+
+
+================================================
+THE CONFIG FILE
+================================================
+
+In each config file, the [libraries] section contained the GEX and PROT for each pool. The [samples] section contained the corresponding samples for each pool, and the probe_barcode_ids was created by appending the Human WTA Probes BC0## and Antibody Multiplexing Barcode AB0## together.
+
+Example:
+[samples]
+sample_id,probe_barcode_ids
+896,BC001+AB001
+899,BC002+AB002
+902,BC003+AB003
+685,BC004+AB004
+
+The pool information can be found here: Kovacs_Gwyn_15samples_BCandAB_20251016.csv
+
+The [feature] reference file came from the PI and was listed in that section.
+
+
+
+================================================
+QUESTIONS?
+================================================
+
+For questions related to this run, please contact:
+Daphne Wong -- USC Molecular Genomics Core
+daphnew@usc.edu

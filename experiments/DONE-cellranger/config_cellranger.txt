@@ -1,0 +1,41 @@
+# ===============================================================
+# CELLRANGER CONFIG FILE
+# This is to run cellranger on 10X Chromium single cell data.
+# ===============================================================
+
+
+# ================= (1) Path to samplesheet.txt ============================================
+# Path to samplesheet.txt
+# example: FILE="/project2/weisenbe_1344/MGC/singleCell/Offringa_Bhowmick_GEX_20251021/run1/samplesheet.txt"
+# ==========================================================================================
+
+FILE=""
+
+
+
+# ================= (2) Path to reference genome directory =====================
+# Check if human or mouse, and make sure the correct one is NOT commented out
+# Default = GRCh38/hg38 Human Reference
+# ==============================================================================
+
+# Human reference:
+REFER="/project2/tp_612_1653/resources/singlecell/refdata-gex-GRCh38-2024-A"
+
+# Mouse reference:
+#REFER="/project2/tp_612_1653/resources/singlecell/refdata-gex-GRCm39-2024-A"
+
+
+
+# ================= (3) Path to FASTQ directory ================================
+# example: FASTQS="/project2/weisenbe_1344/MGC/singleCell/Offringa_Bhowmick_GEX_20251021/fastqs"
+# ==============================================================================
+
+FASTQS=""
+
+
+
+# ================= (4) SLURM Resources =====================
+# ===========================================================
+
+CORES="32"
+MEM="64"

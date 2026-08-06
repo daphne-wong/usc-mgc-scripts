@@ -1,0 +1,28 @@
+# ===============================================================
+# CELLRANGER-MULTI CONFIG FILE
+# This is to run cellranger-multi on 10X GEX, VDJ, Flex1/2, and Feature Barcode data.
+# ===============================================================
+
+
+# ================= (1) Path to samplesheet.txt ============================================
+# Path to samplesheet.txt
+# example: FILE="/project2/weisenbe_1344/MGC/singleCell/Priceman_Novaseq_GEX_TCR_20250821/run1/samplesheet.txt"
+# ==========================================================================================
+
+FILE=""
+
+
+
+# ================= (2) Path to multi config csv =====================
+# example:  multi_csv="/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/run1/config_files/multi_config.csv"
+# ==============================================================================
+
+MULTI_CSV=
+
+
+
+# ================= (3) SLURM Resources =====================
+# ===========================================================
+
+CORES="64"
+MEM="64"

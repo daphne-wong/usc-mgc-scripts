@@ -1,0 +1,6 @@
+fastqs,sample,library_type
+/project2/weisenbe_1344/MGC/multiome/Rhie_Multiome_20250910/gex-fastqs,3558T_GEX,Gene Expression
+/project2/weisenbe_1344/MGC/multiome/Rhie_Multiome_20250910/atac-fastqs,3558T_ATAC_A,Chromatin Accessibility
+/project2/weisenbe_1344/MGC/multiome/Rhie_Multiome_20250910/atac-fastqs,3558T_ATAC_B,Chromatin Accessibility
+/project2/weisenbe_1344/MGC/multiome/Rhie_Multiome_20250910/atac-fastqs,3558T_ATAC_C,Chromatin Accessibility
+/project2/weisenbe_1344/MGC/multiome/Rhie_Multiome_20250910/atac-fastqs,3558T_ATAC_D,Chromatin Accessibility

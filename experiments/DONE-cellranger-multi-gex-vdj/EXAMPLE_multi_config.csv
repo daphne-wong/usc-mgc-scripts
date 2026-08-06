@@ -1,0 +1,20 @@
+[gene-expression]
+reference,/project2/weisenbe_1344/MGC/resources/singlecell/refdata-gex-GRCh38-2024-A
+probe-set,/project2/weisenbe_1344/MGC/resources/antibody/Chromium_Human_Transcriptome_Probe_Set_v1.1.0_GRCh38-2024-A.csv
+create-bam,true
+
+[feature]
+reference,/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/run1/TotalSeq_C_Human_Universal_Cocktail_399905_Antibody_reference_UMI_counting.csv
+
+[libraries]
+fastq_id,fastqs,feature_types
+Pool_1_Gene_Expression,/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/fastqs,Gene Expression
+Pool_1_Protein_Expression,/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/fastqs,Antibody Capture
+
+
+[samples]
+sample_id,probe_barcode_ids
+896,BC001+AB001
+899,BC002+AB002
+902,BC003+AB003
+685,BC004+AB004

@@ -1,0 +1,41 @@
+# ===============================================================
+# CELLRANGER VDJ CONFIG FILE
+# This is to run cellranger on data from 10X Chromium single cell 5' V(D)J libraries.
+# ===============================================================
+
+
+# ================= (1) Path to samplesheet.txt ============================================
+# Path to samplesheet.txt
+# example: FILE="/project2/weisenbe_1344/MGC/singleCell/Priceman_TCR_Only_20250715/run1/samplesheet.txt"
+# ==========================================================================================
+
+FILE=""
+
+
+
+# ================= (2) Path to reference genome directory =====================
+# Check if human or mouse, and make sure the correct one is NOT commented out
+# Default = GRCh38/hg38 Human Reference
+# ==============================================================================
+
+# Human reference:
+REFER="/project2/tp_612_1653/resources/vdj/refdata-cellranger-vdj-GRCm38-alts-ensembl-7.0.0"
+
+# Mouse reference:
+#REFER="/project2/tp_612_1653/resources/vdj/refdata-cellranger-vdj-GRCh38-alts-ensembl-7.1.0"
+
+
+
+# ================= (3) Path to FASTQ directory ================================
+# example: FASTQS="/project2/weisenbe_1344/MGC/singleCell/Priceman_TCR_Only_20250715/fastqs/TCR"
+# ==============================================================================
+
+FASTQS=""
+
+
+
+# ================= (4) SLURM Resources =====================
+# ===========================================================
+
+CORES="64"
+MEM="64"
