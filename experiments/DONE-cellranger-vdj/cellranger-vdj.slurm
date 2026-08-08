@@ -15,7 +15,7 @@
 # ========== Config (edit this section per run) ==========
 
 # (1) Change path to config_cellranger.txt file here:
-# example: config_file="/project2/weisenbe_1344/MGC/singleCell/Priceman_TCR_Only_20250715/run1/config_cellranger_vdj_mouse.txt"
+# example: config_file="/project2/weisenbe_1344/MGC/singleCell/Priceman_TCR_Only_20250715/run1/params_cellranger_vdj.config"
 config_file=
 
 

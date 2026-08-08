@@ -15,7 +15,7 @@
 # ========== Config (edit this section per run) ==========
 
 # (1) Change path to config_cellranger-arc.txt file here:
-# example: config_file=/path/to/run1/config_cellranger-arc-GEXonly.txt
+# example: config_file="/path/to/run1/params_cellranger-arc-GEXonly.cfg"
 config_file=
 
 

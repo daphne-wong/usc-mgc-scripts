@@ -10,15 +10,12 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 
-
 # NOTE: if you are re-running a job in the same directory, please delete previous output directories. Otherwise it will fail.
-# rm -r Processed_Data_Files
-# rm -r QC_Reports
-
+# rm -r Processed_Data_Files QC_Reports
 
 # ========== Config (edit this section per run) ==========
 
-# (1) Define array type, annotation, and samplesheet (FULL) path
+# (1) Define array type, genome annotation, and samplesheet (FULL) path
 
 # EPICv2 -- "IlluminaHumanMethylationEPICv2" "20a1.hg38"
 # EPICv1 -- IlluminaHumanMethylationEPIC" "ilm10b5.hg38"
@@ -40,8 +37,6 @@ samplesheet=
 
 # (3) To run this script, run the next line in the terminal without the starting '#'
 # sbatch epic_array_analysis.slurm
-
-
 
 
 

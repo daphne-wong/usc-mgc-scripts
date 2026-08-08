@@ -17,7 +17,7 @@
 # ========== Config (edit this section per run) ==========
 
 # (1) Change path to config_cellranger.txt file here:
-# example: config_file="/project2/weisenbe_1344/MGC/multiome/Hans_Multiome_07142025/run1/config_cellranger_atac_mouse_1.txt"
+# example: config_file="/project2/weisenbe_1344/MGC/multiome/Hans_Multiome_07142025/run1/params_cellranger-atac.cfg"
 config_file=
 
 

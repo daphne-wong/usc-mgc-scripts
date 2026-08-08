@@ -20,19 +20,16 @@
 ref_genome_name=
 
 
-
 # (2) Change path to fasta and gtf file here:
 # example: fa_file="/project2/weisenbe_1344/MGC/resources/tcr/priceman_fasta_gtf/fasta/genome.fa"
-fa_file=
-
 # example: gtf_file="/project2/weisenbe_1344/MGC/resources/tcr/priceman_fasta_gtf/genes/genes.gtf.gz"
+
+fa_file=
 gtf_file=
 
 
 # (3) To run this script, run the next line in the terminal without the starting '#'
 # sbatch cellranger-mkref.slurm
-
-
 
 
 

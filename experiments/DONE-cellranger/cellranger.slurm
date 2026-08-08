@@ -15,7 +15,7 @@
 # ========== Config (edit this section per run) ==========
 
 # (1) Change path to config_cellranger.txt file here:
-# example: config_file="/project2/weisenbe_1344/MGC/singleCell/Offringa_Bhowmick_GEX_20251021/run1/config_cellranger.txt"
+# example: config_file="/project2/weisenbe_1344/MGC/singleCell/Offringa_Bhowmick_GEX_20251021/run1/params_cellranger.cfg"
 config_file=
 
 
