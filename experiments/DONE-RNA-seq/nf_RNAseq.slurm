@@ -13,7 +13,7 @@
 
 # ========== Config (edit this section per run) ==========
 
-# (1) Change paths to input_files.txt file here:
+# (1) Change path to config file here:
 # example: config_file="/project2/weisenbe_1344/MGC/RNA-Seq/Siletz_20250902/run1/params_RNAseq.cfg"
 config_file=
 

@@ -21,7 +21,7 @@
 
 # ========== Config (edit this section per run) ==========
 
-# (1) Change path to config_cellranger.txt file here:
+# (1) Change path to config file here:
 # example: config_file="/project2/weisenbe_1344/MGC/singleCell/Priceman_Novaseq_GEX_TCR_20250821/run1/params_cellranger-multi.cfg"
 config_file=
 
