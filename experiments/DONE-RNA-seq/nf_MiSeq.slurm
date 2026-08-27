@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=nf-MiSeq
-#SBATCH --partition=epyc-64
+#SBATCH --partition=main
 #SBATCH --account=tp_612_1653
 #SBATCH --nodes=1
 #SBATCH --ntasks=10
@@ -15,7 +15,7 @@
 
 # (1) Change paths to config file here:
 # example: config_file="/project2/weisenbe_1344/MGC/RNA-Seq/Siletz_20250902/run1/params_MiSeq.cfg"
-config_file=
+config_file=$(find . -type f -name "params_Miseq.cfg")
 
 
 # (2) In the #SBATCH header section at the beginning of this file...
@@ -36,11 +36,15 @@ module load gcc/13.3.0
 module load python/3.9.21
 module load openjdk/21.0.0_35
 module load nextflow/23.10.1
-module load apptainer/1.4.2
+module load apptainer/1.4.5
 
+export NXF_APPTAINER_CACHEDIR="/project2/tp_612_1653/resources/apptainer_cache"
+mkdir -p ${NXF_APPTAINER_CACHEDIR}
+
+echo "Nextflow Apptainer Cache Path:"
+echo ${NXF_APPTAINER_CACHEDIR}
 
 # Source config files
-OUTDIR=$(pwd)
 source ${config_file}
 
 
