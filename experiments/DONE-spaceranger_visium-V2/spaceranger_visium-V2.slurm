@@ -41,9 +41,6 @@ module load spaceranger/3.1.2
 # Source config file
 source ${config_file}
 
-# Automatically detect samplesheet
-find 
-
 # Extract sample information from samplesheet
 SAMPLELINE=$(sed -n "${SLURM_ARRAY_TASK_ID}"p ${SAMPLESHEET})
 
