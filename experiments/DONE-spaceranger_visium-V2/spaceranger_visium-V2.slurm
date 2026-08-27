@@ -1,22 +1,12 @@
 #!/bin/bash
-#SBATCH --account=weisenbe_1344
-#SBATCH --nodes=1
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=32
-#SBATCH --mem=64GB
-#SBATCH --time=36:00:00
-#SBATCH --partition=main
-
-
-#!/bin/bash
-#SBATCH --job-name=cellranger
-#SBATCH --partition=main
+#SBATCH --job-name=spaceranger_v2
+#SBATCH --partition=oneweek
 #SBATCH --account=tp_612_1653
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=64GB
-#SBATCH --time=8:00:00
+#SBATCH --time=36:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 #SBATCH --array=1-4
@@ -50,6 +40,9 @@ module load spaceranger/3.1.2
 
 # Source config file
 source ${config_file}
+
+# Automatically detect samplesheet
+find 
 
 # Extract sample information from samplesheet
 SAMPLELINE=$(sed -n "${SLURM_ARRAY_TASK_ID}"p ${SAMPLESHEET})
