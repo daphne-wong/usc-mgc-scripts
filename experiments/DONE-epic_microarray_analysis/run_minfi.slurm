@@ -7,7 +7,7 @@
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=64GB
 #SBATCH --time=8:00:00
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=END,FAIL
 #SBATCH --mail-user=
 
 # NOTE: if you are re-running a job in the same directory, please delete previous output directories. Otherwise it will fail.
@@ -18,7 +18,7 @@
 # (1) Define array type, genome annotation, and samplesheet (FULL) path
 
 # EPICv2 -- "IlluminaHumanMethylationEPICv2" "20a1.hg38"
-# EPICv1 -- IlluminaHumanMethylationEPIC" "ilm10b5.hg38"
+# EPICv1 -- "IlluminaHumanMethylationEPIC" "ilm10b5.hg38"
 # mm285 -- "IlluminaMouseMethylation" "12.v1.mm10"
 
 # example: array="IlluminaHumanMethylationEPICv2"
