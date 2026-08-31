@@ -38,11 +38,14 @@ module load openjdk/21.0.0_35
 module load nextflow/23.10.1
 module load apptainer/1.4.5
 
-export NXF_APPTAINER_CACHEDIR="/project2/tp_612_1653/resources/apptainer_cache"
-mkdir -p ${NXF_APPTAINER_CACHEDIR}
+export CACHE_BASE="$(pwd)/apptainer_cache_base"
 
-echo "Nextflow Apptainer Cache Path:"
-echo ${NXF_APPTAINER_CACHEDIR}
+export NXF_APPTAINER_CACHEDIR="${CACHE_BASE}/nf_cache"
+export APPTAINER_CACHEDIR="${CACHE_BASE}/apptainer_cache"
+export APPTAINER_TMPDIR="${CACHE_BASE}/apptainer_tmp"
+
+mkdir -p "${NXF_APPTAINER_CACHEDIR}" "${APPTAINER_CACHEDIR}" "${APPTAINER_TMPDIR}"
+
 
 # Source config files
 source ${config_file}
