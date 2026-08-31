@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --account=weisenbe_1344
+#SBATCH --account=tp_612_1653
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8

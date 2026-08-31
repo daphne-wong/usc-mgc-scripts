@@ -1,6 +1,6 @@
 #!/bin/bash
+#SBATCH --account=tp_612_1653
 #SBATCH --partition=largemem
-#SBATCH --account=weisenbe_1344
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8

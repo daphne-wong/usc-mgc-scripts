@@ -1,4 +1,5 @@
 #!/bin/bash
+#SBATCH --account=tp_612_1653
 #SBATCH --partition=main
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
