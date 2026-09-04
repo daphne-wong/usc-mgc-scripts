@@ -54,6 +54,7 @@ module load r/4.4.2
 mkdir -p ../Processed_Data_Files
 mkdir -p ../QC_Reports
 
+script_path="/project2/tp_612_1653/scripts/experiments/epic_microarray_analysis/epic_analysis.R"
 
 # Run the R Script
-Rscript epic_analysis.R "${array}" "${annotation}" "${samplesheet}"
+Rscript ${script_path} "${array}" "${annotation}" "${samplesheet}"
