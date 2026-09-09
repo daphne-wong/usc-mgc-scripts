@@ -50,5 +50,10 @@ bs download project -i ${ID} -o ${FASTQ_PATH}  --extension=fastq.gz
 #BCL_PATH=
 #bs download run -i ${ID} -o ${BCL_PATH}
 
+
+
+# DOWNLOADING INDIVIDUAL DATASETS
+#bs list datasets -F Name  -F "Project.Id" -F "AppSession.DateCompleted" -F AppSession.Application.Name 
+
 echo "Download Completed"
 
