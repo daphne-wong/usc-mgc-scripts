@@ -1,8 +1,14 @@
 # Install sesame
 
-if (!require("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("sesame")
+#if (!require("BiocManager", quietly = TRUE))
+#  install.packages("BiocManager", lib = "/project2/tp_612_1653/resources/microarray/EPIC_R_Library")
+#BiocManager::install("sesame", lib = "/project2/tp_612_1653/resources/microarray/EPIC_R_Library")
+
+# Specify libpaths
+.libPaths("/project2/tp_612_1653/resources/microarray/EPIC_R_Library")
+
+BiocManager::install("BiocParallel", lib = "/project2/tp_612_1653/resources/microarray/EPIC_R_Library")
+BiocManager::install("preprocessCore", lib = "/project2/tp_612_1653/resources/microarray/EPIC_R_Library")
 
 
 library(sesame)
@@ -11,12 +17,19 @@ library(BiocParallel)
 library(preprocessCore)
 options(preprocessCore.use.cores = 1)
 
+# Set working directory project folder (SLURM script is in ./scripts, data in ./IDATS)
+#getwd()
+setwd("../")
+
 # Point to your IDAT directory and samplesheet
-path <- file.path("/project2/weisenbe_1344/scripts/experiments/epic_microarray_analysis/sesame_test_dir")
+path <- file.path(getwd())
+
 #path <- file.path("/project2/tp_612_1653/Paulson_Thomas/Paulson_EPICv2_01262026/run1/")
 idat_dir <- file.path(path, "IDATS/")
-samplesheet <- read.csv(file.path("/project2/weisenbe_1344/scripts/experiments/epic_microarray_analysis/sesame_test_dir/Paulson_EPICv2_rerun_02272026_Sample_Sheet.csv"))
 
+args <- commandArgs(trailingOnly=TRUE)
+if (length(args) < 3) stop("Must provide samplesheet, array and annotation as arguments")
+samplesheet <- args[3]
 
 
 # Option 2: Step-by-step with FFPE-relevant additions

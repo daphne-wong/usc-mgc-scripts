@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=epic_array_analysis
+#SBATCH --job-name=minfi
 #SBATCH --partition=main
 #SBATCH --account=tp_612_1653
 #SBATCH --nodes=1
@@ -54,7 +54,8 @@ module load r/4.4.2
 mkdir -p ../Processed_Data_Files
 mkdir -p ../QC_Reports
 
-script_path="/project2/tp_612_1653/scripts/experiments/epic_microarray_analysis/epic_analysis.R"
+#script_path="/project2/tp_612_1653/scripts/experiments/epic_microarray_analysis/epic_analysis.R"
+script_path="/project2/tp_612_1653/scripts_test/experiments/DONE-epic_microarray_analysis/epic_analysis.R"
 
 # Run the R Script
 Rscript ${script_path} "${array}" "${annotation}" "${samplesheet}"

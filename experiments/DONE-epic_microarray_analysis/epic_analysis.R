@@ -20,7 +20,7 @@
 
 
 # Specify lib paths -- project2 directory
-.libPaths("/project2/weisenbe_1344/MGC/resources/microarray/EPIC_R_Library")
+.libPaths("/project2/tp_612_1653/resources/microarray/EPIC_R_Library")
 
 
 # Call libraries
@@ -34,9 +34,9 @@ library(IlluminaMouseMethylationanno.12.v1.mm10)
 
 # Set args from slurm script
 args <- commandArgs(trailingOnly=TRUE)
-if (length(args) < 2) stop("Must provide array and annotation as arguments")
+if (length(args) < 3) stop("Must provide samplesheet, array and annotation as arguments")
 
-# Set working directory project folder (scripts are in ./scripts, data in ./IDATS)
+# Set working directory project folder (SLURM script is in ./scripts, data in ./IDATS)
 #getwd()
 setwd("../")
 run_dir <- getwd()
