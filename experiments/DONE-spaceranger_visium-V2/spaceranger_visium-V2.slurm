@@ -42,7 +42,7 @@ module load spaceranger/3.1.2
 source ${config_file}
 
 # Extract sample information from samplesheet
-SAMPLELINE=$(sed -n "${SLURM_ARRAY_TASK_ID}"p ${SAMPLESHEET})
+SAMPLELINE=$(sed -n "${SLURM_ARRAY_TASK_ID}"p ${FILE})
 
 SAMPLEID=$(echo ${SAMPLELINE} | cut -d, -f1)
 SLIDEID=$(echo ${SAMPLELINE} | cut -d, -f2)
