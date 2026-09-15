@@ -13,19 +13,31 @@
 # Required: (1) genome fasta file in a `.fa` format, (2) GTF file in a `.gtf` or `.gtf.gz` format
 
 
+
 # ========== Config (edit this section per run) ==========
+
+# Human genome reference
+# cp /project2/tp_612_1653/resources/reference_genome_copy/GCF_000001405.26_GRCh38_genomic* .
+
+# Mouse genome reference
+# cp /project2/tp_612_1653/resources/reference_genome_copy/GCF_000001635.27_GRCm39_genomic* .
+
+# Cellranger tutorial on how to add custom genes:
+# https://www.10xgenomics.com/support/software/cell-ranger/latest/tutorials/cr-tutorial-mr#add-marker-gene
+
+
 
 # (1) Name the output reference genome directory
 # example: ref_genome_name="refdata-gex-GRCm39-2024-A_with_PSCACAR_PSMACAR_TAG72CAR"
-ref_genome_name=
+ref_genome_name=""
 
 
 # (2) Change path to fasta and gtf file here:
 # example: fa_file="/project2/weisenbe_1344/MGC/resources/tcr/priceman_fasta_gtf/fasta/genome.fa"
 # example: gtf_file="/project2/weisenbe_1344/MGC/resources/tcr/priceman_fasta_gtf/genes/genes.gtf.gz"
 
-fa_file=
-gtf_file=
+fa_file=""
+gtf_file=""
 
 
 # (3) To run this script, run the next line in the terminal without the starting '#'
@@ -42,5 +54,5 @@ module load cellranger/9.0.1
 
 # Run cellranger mkref
 cellranger mkref --genome=${ref_genome_name} \
-    --fasta= ${fa_file} \
-    --genes= ${gtf_file} \
+    --fasta=${fa_file} \
+    --genes=${gtf_file} \
