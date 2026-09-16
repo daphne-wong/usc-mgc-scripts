@@ -71,7 +71,7 @@ EOF
 module load cellranger/9.0.1
 
 # Source config file
-source ${config_csv}
+source ${config_file}
 
 # Get sample name from samplesheet
 SAMPLE=$(sed -n "$SLURM_ARRAY_TASK_ID"p $FILE)
