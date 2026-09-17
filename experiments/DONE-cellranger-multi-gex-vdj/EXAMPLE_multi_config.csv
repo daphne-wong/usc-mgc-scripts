@@ -1,20 +1,19 @@
+#### THIS IS AN EXAMPLE FOR 5'GEX, V(D)J, and Antibody Capture Singleplex ####
+# For full list of templates, see here: 
+# https://www.10xgenomics.com/support/software/cell-ranger/latest/analysis/inputs/cr-multi-config-csv-opts
+
 [gene-expression]
-reference,/project2/weisenbe_1344/MGC/resources/singlecell/refdata-gex-GRCh38-2024-A
-probe-set,/project2/weisenbe_1344/MGC/resources/antibody/Chromium_Human_Transcriptome_Probe_Set_v1.1.0_GRCh38-2024-A.csv
+reference,/project2/tp_612_1653/resources/singlecell/refdata-gex-GRCh38-2024-A
 create-bam,true
 
+[vdj]
+reference,/project2/tp_612_1653/resources/vdj/refdata-cellranger-vdj-GRCh38-alts-ensembl-7.1.0
+
 [feature]
-reference,/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/run1/TotalSeq_C_Human_Universal_Cocktail_399905_Antibody_reference_UMI_counting.csv
+reference,/project2/tp_612_1653/Abou-el-Enein/Abou-el-Enein_20260914/run1/TotalSeq_C_Human_Universal_v2_399910_Antibody_reference_UMI_counting_cellranger.csv
 
 [libraries]
 fastq_id,fastqs,feature_types
-Pool_1_Gene_Expression,/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/fastqs,Gene Expression
-Pool_1_Protein_Expression,/project2/weisenbe_1344/MGC/singleCell/Kovacs_20251119/fastqs,Antibody Capture
-
-
-[samples]
-sample_id,probe_barcode_ids
-896,BC001+AB001
-899,BC002+AB002
-902,BC003+AB003
-685,BC004+AB004
+B_Do004_GEX,/project2/tp_612_1653/Abou-el-Enein/Abou-el-Enein_20260914/fastqs,Gene Expression
+B_Do004_TCR,/project2/tp_612_1653/Abou-el-Enein/Abou-el-Enein_20260914/fastqs,VDJ-T
+B_Do004_CellSurfaceProtein,/project2/tp_612_1653/Abou-el-Enein/Abou-el-Enein_20260914/fastqs,Antibody Capture
