@@ -37,7 +37,7 @@ ID=
 FASTQ_PATH=
 
 #Run the following command to pull FASTQs from the Basespace account
-bs download project -i ${ID} -o ${FASTQ_PATH}  --extension=fastq.gz
+bs download project -v -i ${ID} -o ${FASTQ_PATH}  --extension=fastq.gz
 
 #DOWNLOADING BCL FILES
 
@@ -48,7 +48,7 @@ bs download project -i ${ID} -o ${FASTQ_PATH}  --extension=fastq.gz
 #Run the following command to pull BCL files from the Basespace account
 #ID=
 #BCL_PATH=
-#bs download run -i ${ID} -o ${BCL_PATH}
+#bs download run -v -i ${ID} -o ${BCL_PATH}
 
 
 
