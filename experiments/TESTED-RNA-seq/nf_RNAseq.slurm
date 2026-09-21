@@ -15,7 +15,12 @@
 
 # (1) Change path to config file here:
 # example: config_file="/project2/weisenbe_1344/MGC/RNA-Seq/Siletz_20250902/run1/params_RNAseq.cfg"
-config_file=$(find . -type f -name "params_RNAseq.cfg")
+config_file=$(find . -type f -name "params_RNAseq.cfg" -print -quit)
+
+if [[ -z "${config_file}" ]]; then
+    echo "ERROR: Could not find params_RNAseq.cfg" >&2
+    exit 1
+fi
 
 
 # (2) In the #SBATCH header section at the beginning of this file...
@@ -38,7 +43,7 @@ module load openjdk/21.0.0_35
 module load nextflow/23.10.1
 module load apptainer/1.4.5
 
-export CACHE_BASE="$(pwd)/apptainer_cache_base"
+export CACHE_BASE="$(pwd)/.apptainer_cache_base"
 
 export NXF_APPTAINER_CACHEDIR="${CACHE_BASE}/nf_cache"
 export APPTAINER_CACHEDIR="${CACHE_BASE}/apptainer_cache"
@@ -53,6 +58,8 @@ source ${config_file}
 
 # Run nf-core RNAseq pipeline
 nextflow run nf-core/rnaseq \
+    -r 3.14.0 \
+    -c /project2/tp_612_1653/resources/nextflow/config/nf_slurm_profile.config \
     --input ${SAMPLESHEET} \
     --outdir ${OUT_DIR} \
     --gtf ${REF_GTF} \
@@ -62,3 +69,4 @@ nextflow run nf-core/rnaseq \
     --trimmer ${trimmer} \
     -profile slurm,apptainer \
     --save_align_intermeds \
+
