@@ -34,7 +34,7 @@ For a full runthrough, see here: [Downloading files from BaseSpace]()
 ```
 # Move into fastqs directory and copy script
 cd fastqs
-cp /project2/tp_612_1653/scripts/miscellaneous/basespace-script.slurm .
+cp /project2/tp_612_1653/scripts_test/miscellaneous/basespace-script.slurm .
 
 
 # Activate basespace
@@ -81,7 +81,7 @@ cd csv_files
 ```
 ### 3. Copy over scripts and files ###
 ```
-cp /project2/tp_612_1653/scripts/experiments/cellranger-multi/* .
+cp /project2/tp_612_1653/scripts_test/experiments/cellranger-multi/* .
 ```
 
 ### 4. Replace ${FILE} variable in params_cellranger-multi.cfg with path to `samplesheet.txt`

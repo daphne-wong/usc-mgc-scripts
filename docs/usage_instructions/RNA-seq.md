@@ -96,7 +96,7 @@ fastq_dir=""
 ```
 ### 3. Copy over scripts and files ###
 ```
-cp /project2/tp_612_1653/scripts/experiments/RNA-seq/*RNAseq* .
+cp /project2/tp_612_1653/scripts_test/experiments/RNA-seq/*RNAseq* .
 ```
 
 ### 4. Replace ${FILE} variable in params_RNAseq.cfg with path to `samplesheet.csv`
