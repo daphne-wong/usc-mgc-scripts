@@ -39,7 +39,9 @@ cp /project2/tp_612_1653/scripts/miscellaneous/basespace-script.slurm .
 
 
 # Activate basespace
-conda activate basespace-cli
+mamba init bash
+source ~/.bashrc
+mamba activate basespace-cli
 
 
 # Re-authenticate if needed
