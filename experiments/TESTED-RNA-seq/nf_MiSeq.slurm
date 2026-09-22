@@ -53,6 +53,8 @@ source ${config_file}
 
 # Run nf-core RNAseq pipeline
 nextflow run nf-core/rnaseq \
+    -r 3.14.0 \
+    -c /project2/tp_612_1653/resources/nextflow/config/nf_slurm_profile.config \
     --input ${SAMPLESHEET} \
     --outdir ${OUT_DIR} \
     --gtf ${REF_GTF} \

@@ -66,6 +66,7 @@ find . -type d -empty -delete
 ### 1. Create `samplesheet.txt` file
 ```
 cd ../run1
+
 ```
 
 ### 2. Create `*_multi.csv` files ###
