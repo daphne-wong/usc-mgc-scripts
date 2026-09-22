@@ -81,7 +81,7 @@ cd csv_files
 cp /project2/tp_612_1653/scripts/experiments/cellranger-multi/* .
 ```
 
-### 4. Replace {FILE} variable with path to `samplesheet.txt`
+### 4. Replace ${FILE} variable in params_cellranger-multi.cfg with path to `samplesheet.txt`
 ```
 # If you are unsure of the samplesheet.txt path, run this command in your run1/ directory:
 
@@ -90,6 +90,9 @@ readlink -f samplesheet.txt
 
 ### 5. Run the SLURM script
 ```
+# By default, SLURM will send an email to the one affiliated with your CARC account when the job either completes successfully, or fails.
+
+
 # If your run has `n` samples:
 
 sbatch --array=[1-n] cellranger-multi.slurm
