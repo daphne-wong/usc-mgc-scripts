@@ -35,7 +35,7 @@ For a full runthrough, see here: [Downloading files from BaseSpace]()
 ```
 # Move into fastqs directory and copy script
 cd fastqs
-cp /project2/tp_612_1653/scripts/miscellaneous/basespace-script.slurm .
+cp /project2/tp_612_1653/scripts_test/miscellaneous/basespace-script.slurm .
 
 
 # Activate basespace
