@@ -64,19 +64,15 @@ find . -type d -empty -delete
 ```
 
 ## (3) Project-specific Prep ##
-### 1. Create `samplesheet.txt` file
-```
-cd ../run1
-```
 
-### 2. Create `*_multi.csv` files ###
-* One file per sample
-* Must be placed within `run1/csv_files` directory
+### 1. Create `samplesheet.csv` file ###
 * Has a **VERY SPECIFIC FORMAT.** 
   * See: [nf-core/rnaseq full samplesheet example](https://nf-co.re/rnaseq/3.14.0/docs/usage/#full-samplesheet)
   * Example: [RNAseq samplesheet](../../experiments/TESTED-RNA-seq/EXAMPLE_samplesheet_RNAseq.csv)
 ```
 # If you are in the run1 directory with same setup from Step 1
+
+cd ../run1
 
 {echo "sample,fastq_1,fastq_2,strandedness"
     for r1 in ../fastqs/*_L001_R1_001.fastq.gz; do
@@ -88,6 +84,8 @@ cd ../run1
 #----------------------------------------------------------------------------------
 
 # If the fastqs are in a different directory, paste path in fastq_dir'
+
+cd ../run1
 fastq_dir=""
 {echo "sample,fastq_1,fastq_2,strandedness"
     for r1 in ${fastq_dir}/*_L001_R1_001.fastq.gz; do
