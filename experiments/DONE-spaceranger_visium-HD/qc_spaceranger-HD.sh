@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # If this is your first time running the custom MultiQC module for Spaceranger v3.1.2
-# python -m pip install --force-reinstall --no-deps /project2/tp_612_1653/resources/spatial/multiqc_spaceranger
+# python -m pip install --force-reinstall --no-deps /project2/tp_612_1653/resources/qc_for_10x/custom_multiqc
 
 # To run the script:
 # sh ./qc_spaceranger-HD.sh
