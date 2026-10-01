@@ -16,7 +16,7 @@ cd multiqc || exit 1
 
 
 # Run multiqc
-multiqc -o . --title="${run_name}" ${in_dir}
+multiqc -m custom_spaceranger -o . --title="${run_name}" ${in_dir}
 
 # Make web_summaries folder
 mkdir -p web_summaries
