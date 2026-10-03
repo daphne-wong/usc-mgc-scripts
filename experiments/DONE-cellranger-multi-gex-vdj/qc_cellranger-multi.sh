@@ -6,11 +6,13 @@
 
 # Run from the directory that contains the <run>/outs folders:
 # bash qc_cellranger-multi.sh
+# bash qc_cellranger-multi.sh {custom_title}
 
 set -euo pipefail
 shopt -s nullglob
 
-run_name=$(basename "$(dirname "$PWD")")
+run_name=${1:-$(basename "$(dirname "$PWD")")}
+run_name=${run_name//\//_}   # Option to change the multiqc report tile
 out_dir="$PWD/multiqc"
 sample_dirs=( "$PWD"/*/outs/per_sample_outs/*/ )
 
