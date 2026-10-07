@@ -3,9 +3,9 @@
 #SBATCH --partition=main
 #SBATCH --account=tp_612_1653
 #SBATCH --nodes=1
-#SBATCH --ntasks=10
-#SBATCH --cpus-per-task=4
-#SBATCH --mem=128GB
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=2
+#SBATCH --mem=8GB
 #SBATCH --time=48:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
