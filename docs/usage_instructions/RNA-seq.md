@@ -75,13 +75,13 @@ find . -type d -empty -delete
 cd ../run1
 
 { echo "sample,fastq_1,fastq_2,strandedness"; 
-   for r1 in ../fastqs/*_L001_R1_001.fastq.gz; 
-   do r1=$(realpath "$r1"); 
-   sample=$(basename "$r1" _L001_R1_001.fastq.gz); 
-   sample=${sample%_S[0-9]*}; 
-   r2="${r1/_L001_R1_001.fastq.gz/_L001_R2_001.fastq.gz}"; 
-   echo "${sample},${r1},${r2},auto"; 
-   done; } > samplesheet.csv
+	for r1 in ../fastqs/*_R1_001.fastq.gz; 
+	do r1=$(realpath "$r1"); 
+	sample=$(basename "$r1"); 
+	sample="${sample%_S[0-9]*_R1_001.fastq.gz}"; 
+	r2="${r1%_R1_001.fastq.gz}_R2_001.fastq.gz"; 
+	echo "${sample},${r1},${r2},auto"; 
+  done; } > samplesheet.csv
 
 #----------------------------------------------------------------------------------
 
