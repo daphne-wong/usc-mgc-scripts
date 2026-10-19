@@ -16,7 +16,12 @@
 
 # (1) Change path to config_cellranger.txt file here:
 # example: config_file="/project2/weisenbe_1344/MGC/singleCell/Offringa_Bhowmick_GEX_20251021/run1/params_cellranger.cfg"
-config_file=
+config_file=$(find "$SLURM_SUBMIT_DIR" -maxdepth 1 -name "params_cellranger.cfg")
+
+if [[ -z "$config_file" ]]; then
+      echo "ERROR: config file not found" >&2
+      exit 1
+fi
 
 
 # (2) In the #SBATCH header section at the beginning of this file...
@@ -53,4 +58,4 @@ cellranger count --id=${SAMPLE} \
                  --sample=${SAMPLE} \
                  --localcores=${CORES} \
                  --localmem=${MEM} \
-                 --create-bam true
+                 --create-bam=true
