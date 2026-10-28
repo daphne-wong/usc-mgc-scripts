@@ -43,11 +43,10 @@ module load openjdk/21.0.0_35
 module load nextflow/23.10.1
 module load apptainer/1.4.5
 
-export NXF_APPTAINER_CACHEDIR="/project2/tp_612_1653/resources/nextflow/apptainer_cache"
-export APPTAINER_CACHEDIR="${NXF_APPTAINER_CACHEDIR}/build_cache"
-export APPTAINER_TMPDIR="$(pwd)/.apptainer_tmp"
-
-mkdir -p "${NXF_APPTAINER_CACHEDIR}" "${APPTAINER_CACHEDIR}" "${APPTAINER_TMPDIR}"
+export CACHE_BASE="/project2/tp_612_1653/resources/nextflow/apptainer_cache_base"
+export NXF_APPTAINER_CACHEDIR="${CACHE_BASE}/nf_cache"
+export APPTAINER_CACHEDIR="${CACHE_BASE}/apptainer_cache"
+export APPTAINER_TMPDIR="${CACHE_BASE}/apptainer_tmp"
 
 
 # Source config files
@@ -62,9 +61,9 @@ nextflow run nf-core/rnaseq \
     --outdir ${OUT_DIR} \
     --gtf ${REF_GTF} \
     --fasta ${REF_FA} \
+    --star_index ${STAR_INDEX} \
     --igenomes_ignore \
     --genome null \
     --trimmer ${trimmer} \
     -profile slurm,apptainer \
-    --save_align_intermeds \
-
+    -resume
