@@ -27,6 +27,10 @@ mamba activate basespace-cli
 #If changing Basespace account or initializing Basespace account setup run the following command:
 #bs auth --force
 
+# Output basespace account name
+echo "Basespace account:"
+bs whoami
+
 #DOWNLOADING FASTQ FILES
 
 #Run the following command to list the projects in the Basespace account
